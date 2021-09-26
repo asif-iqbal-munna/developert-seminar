@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Contributors = (props) => {
-    // console.log(props.contributor);
+    
+    // Destructuring props for the properties of contributors object
     const {itName, ceo, developers, location, donation, img} = props.contributor;
-    // console.log(itName);
+    
     return (
         <div className="col">
             <div className="card shadow h-100">

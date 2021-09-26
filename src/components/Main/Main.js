@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Contributors from '../Contributors/Contributors';
 import Contstatus from '../Contstatus/Contstatus';
-import './Main.css';
 
 const Main = () => {
 
+    // To load and show all contributors data to the card
     const [contributors, setContributors] = useState([]);
+
+    // Set the subscribers to show to the board
     const [subscribers, setSubscribers] = useState([]);
     const [names, setNames] = useState([])
-    // console.log(contributors);
+
+    // loading data from the public folder 'seminardata.json'
     useEffect( () => {
         fetch('./seminardata.json')
             .then(resp => resp.json())
@@ -16,12 +19,16 @@ const Main = () => {
     },[])
 
     let subscribersNames = [];
+
+    // Subscribe Button Handler
     const handleSubscribeBtn = subscriber => {
-        // console.log(subscribers);
+        // Getting Subscribers
         const totalSubscribers = [...subscribers, subscriber];
-        // console.log(subscriber.itName);
-        // console.log(totalSubscribers);
+        
+        // Set subscribers to show data to the board
         setSubscribers(totalSubscribers);
+
+        // Set Name for showing names to the board
         for(const subscriber of totalSubscribers){
             subscribersNames.push(subscriber.itName);
             setNames(subscribersNames)
@@ -32,6 +39,7 @@ const Main = () => {
         <main className="py-5">
             <div className="container">
                 <div className="row">
+                    {/* contributors cards data container  */}
                     <section className="col-9">
                         <h3 className="text-center text-info mb-4">Potray Top Contributors To The Board</h3>
                         <div className='row row-cols-1 row-cols-md-3 g-4'>
@@ -44,6 +52,7 @@ const Main = () => {
                             }
                         </div>
                     </section>
+                    {/* Showing top developers data to the board */}
                     <section className="col-3">
                         <Contstatus 
                             subscribers={subscribers}
