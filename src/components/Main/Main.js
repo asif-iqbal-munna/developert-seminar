@@ -37,11 +37,11 @@ const Main = () => {
     
     return (
         <main className="py-5">
+            <h3 className="text-center text-info mb-4">Subscribe To Potray Top Contributors To The Board</h3>
             <div className="container">
                 <div className="row">
                     {/* contributors cards data container  */}
                     <section className="col-9">
-                        <h3 className="text-center text-info mb-4">Potray Top Contributors To The Board</h3>
                         <div className='row row-cols-1 row-cols-md-3 g-4'>
                             {
                                 contributors.map( contributor => <Contributors

@@ -13,7 +13,7 @@ const Contstatus = (props) => {
             <h2 className='text-info'>Board</h2>
             <h5>Top Contributors: {subscribers.length}</h5>
             <p>Total Contribution: ${total}</p>
-            <h6>Contributors Names</h6>
+            <h6 className= 'text-info'>Contributors Names</h6>
             <ul className="list-group list-group-numbered">
                 {   
                     // mapping names array for showing name of the companies. 
