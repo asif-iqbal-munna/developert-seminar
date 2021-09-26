@@ -2,7 +2,7 @@
 
 Here is the details of [Developer Seminar](https://developer-seminar.netlify.app/).
 
-## About The Project
+## Here Is The Summary About The Project
 - This project is about a developer seminar
 - There is a budget for the seminar. In this seminar, most of the software company of the USA will present. 
     It has some sponsored and many company danated money to fulfill the seminar. There are top 13 software companies 
