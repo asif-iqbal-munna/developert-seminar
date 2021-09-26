@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { faDonate } from '@fortawesome/free-solid-svg-icons';
 
 const Contributors = (props) => {
     
@@ -18,7 +20,10 @@ const Contributors = (props) => {
                     <p>Location: {location}</p>
                     <p>Donation: {donation}</p>
                     <button className='btn btn-info d-block mx-auto text-white' 
-                            onClick={() => props.subscribeBtn(props.contributor)}>Subscribe</button>
+                            onClick={() => props.subscribeBtn(props.contributor)}>
+                                Subscribe
+                                <FontAwesomeIcon className='ms-2' icon={faDonate} />
+                                </button>
                 </div>
             </div>
         </div>
